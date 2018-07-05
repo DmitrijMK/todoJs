@@ -17,7 +17,7 @@
         </section>
     </div>
 </header>
-<form onsubmit="changeTask(addTaskInput.value)" class="mdc-form-field form">
+<form onsubmit="controller.changeTask(addTaskInput.value)" class="mdc-form-field form">
     <input type="text" id="addTaskInput" class="mdc-text-field__input" placeholder="Введите задачу">
     <button id="addTaskButton" class="mdc-button">Ok</button>
 </form>
@@ -25,10 +25,9 @@
 <ul id="wrapper" class="mdc-list"></ul>
 
 <script defer src="js/controller.js"></script>
-<script defer src="js/model.js"></script>
+
 <script defer src="js/view.js"></script>
+<script defer src="js/model.js"></script>
 <script defer src="js/main.js"></script>
-
-
 </body>
 </html>

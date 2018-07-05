@@ -1,7 +1,5 @@
-const addTaskInput = document.getElementById('addTaskInput');
-
 (function render() {
-  if (tasks.length) for (const task of tasks) view(task);
+  if (tasks.length) for (const task of tasks) view.view(task);
 })();
 
 (function check() {
@@ -11,9 +9,9 @@ const addTaskInput = document.getElementById('addTaskInput');
     const [buttonEdit] = item.getElementsByClassName('edit');
 
     if (buttonDelete && buttonDelete !== null) {
-      buttonDelete.addEventListener('click', () => deleteTask(task.id, item));
-      buttonEdit.addEventListener('click', () => editTask(task));
-      item.addEventListener('click', () => checkTask(task, item));
+      buttonDelete.addEventListener('click', () => controller.deleteTask(task.id, item));
+      buttonEdit.addEventListener('click', () => controller.editTask(task));
+      item.addEventListener('click', () => controller.checkTask(task, item));
     }
   }
 })();
